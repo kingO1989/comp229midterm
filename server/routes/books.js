@@ -23,7 +23,25 @@ router.get('/', (req, res, next) => {
 
 });
 
+//  GET the Book Details page in order to add a new Book
+router.get('/add', (req, res, next) => {
 
+  /*****************
+   * ADD CODE HERE *
+   *****************/
+ 
+   let abook = book({
+    "Title":"",
+    "Description":"",
+    "Price":null,
+    "Author":"",
+    "Genre":""
+});
+
+   res.render('books/details',{title:'Add A Book',books:abook});
+
+
+});
 
 
 module.exports = router;
