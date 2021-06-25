@@ -1,5 +1,11 @@
-/* custom JS goes here */
 
+/*
+Name:Abdulsaheed Durodola
+Student ID:301134925
+
+
+*/
+/* custom JS goes here */
 /* pagination code from http://www.bootply.com/lxa0FF9yhw */
 $.fn.pageMe = function(opts){
     var $this = this,
