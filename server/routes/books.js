@@ -43,5 +43,36 @@ router.get('/add', (req, res, next) => {
 
 });
 
+ //POST process the Book Details page and create a new Book - CREATE
+router.post('/add', (req, res, next) => {
+
+    /*****************
+     * ADD CODE HERE *
+     *****************/
+
+    //declare id for item associated with CRUD request
+     let abook = book({
+      "Title":req.body.title,
+      "Description":"",
+      "Price":req.body.price,
+      "Author":req.body.author,
+      "Genre":req.body.genre
+  });
+book.create(abook,(err)=>
+{
+if(err)
+{
+  console.log(err);
+  res.end(err);
+}
+else
+{
+  res.redirect('/books');
+}
+
+}); 
+
+});
+
 
 module.exports = router;
